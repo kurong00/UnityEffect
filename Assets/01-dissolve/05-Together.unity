@@ -281,11 +281,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Logo Fade
       objectReference: {fileID: 0}
-    - target: {fileID: 6967048726760976436, guid: e339f6bcbda07f0439998dbbb10da40f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6967048726760976441, guid: e339f6bcbda07f0439998dbbb10da40f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -341,21 +336,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6967048726760976438, guid: e339f6bcbda07f0439998dbbb10da40f,
-        type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6967048726760976438, guid: e339f6bcbda07f0439998dbbb10da40f,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6967048726760976438, guid: e339f6bcbda07f0439998dbbb10da40f,
-        type: 3}
-      propertyPath: InitialModule.size3D
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e339f6bcbda07f0439998dbbb10da40f, type: 3}
 --- !u!4 &961865056 stripped
@@ -375,11 +355,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Logo Noise Dispersal
-      objectReference: {fileID: 0}
-    - target: {fileID: 752147700034356904, guid: ec69cd1da77f10147bfe1f9a5a8950e2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 752147700034356901, guid: ec69cd1da77f10147bfe1f9a5a8950e2,
         type: 3}
@@ -434,16 +409,6 @@ PrefabInstance:
     - target: {fileID: 752147700034356901, guid: ec69cd1da77f10147bfe1f9a5a8950e2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 752147700034356901, guid: ec69cd1da77f10147bfe1f9a5a8950e2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 752147700034356902, guid: ec69cd1da77f10147bfe1f9a5a8950e2,
-        type: 3}
-      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5231,11 +5196,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Logo Burst
       objectReference: {fileID: 0}
-    - target: {fileID: 2951821613756634516, guid: bacc75f7f65f0dd42b6723cc7e3eec2a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4461460559165517304, guid: bacc75f7f65f0dd42b6723cc7e3eec2a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5289,11 +5249,6 @@ PrefabInstance:
     - target: {fileID: 4461460559165517304, guid: bacc75f7f65f0dd42b6723cc7e3eec2a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4593906791677051898, guid: bacc75f7f65f0dd42b6723cc7e3eec2a,
-        type: 3}
-      propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

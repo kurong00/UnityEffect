@@ -345,5 +345,15 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6967048726760976438, guid: e339f6bcbda07f0439998dbbb10da40f,
+        type: 3}
+      propertyPath: ColorModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6967048726760976438, guid: e339f6bcbda07f0439998dbbb10da40f,
+        type: 3}
+      propertyPath: ForceModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e339f6bcbda07f0439998dbbb10da40f, type: 3}
