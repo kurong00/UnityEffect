@@ -66,11 +66,11 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NoiseAbs: 1
-    - _NoiseAmplitude: 5.17
-    - _NoiseFrequency: 0.088
-    - _NoiseSpeedX: 16.1
-    - _NoiseSpeedY: 9.5
-    - _NoiseSpeedZ: 8.8
+    - _NoiseAmplitude: 0.75
+    - _NoiseFrequency: 0.25
+    - _NoiseSpeedX: 0
+    - _NoiseSpeedY: 1
+    - _NoiseSpeedZ: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -80,6 +80,6 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColourA: {r: 1, g: 0.2688679, b: 0.46017706, a: 0}
-    - _ColourB: {r: 0.2971698, g: 0.7512064, b: 1, a: 1}
+    - _ColourA: {r: 1.1486983, g: 0.31082428, b: 0.52704984, a: 0.30588236}
+    - _ColourB: {r: 0.42332652, g: 1.0651442, b: 1.4201922, a: 0.8039216}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
