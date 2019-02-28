@@ -7,4 +7,4 @@ Learning Unity Effects according to [Mirza Beig's blog](http://www.mirzabeig.com
 ## 03-Stylized Particle Galaxy
 ![](https://github.com/kurong00/EditGraphics/blob/master/UnityEffects/Stylized%20Particle%20Galaxy.gif?raw=true)
 ## 04-GPU Particle Animation w
-![](https://github.com/kurong00/EditGraphics/blob/master/UnityEffects/GPU%20Particle%20Animation%20w?raw=true)
+![](https://github.com/kurong00/EditGraphics/blob/master/UnityEffects/GPU%20Particle%20Animation%20w.gif?raw=true)
