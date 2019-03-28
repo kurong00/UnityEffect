@@ -5,6 +5,8 @@
         _MainTex ("Texture", 2D) = "white" {}
         _ForceFieldRadius("Force Field Radius", Float) = 4.0
         _ForceFieldPosition("Force Field Position", Vector) = (0.0, 0.0, 0.0, 0.0)
+        [HDR] _ColourA("Color A", Color) = (0.0, 0.0, 0.0, 0.0)
+        [HDR] _ColourB("Color B", Color) = (1.0, 1.0, 1.0, 1.0)
     }
     SubShader
     {
@@ -42,18 +44,27 @@
             float4 _MainTex_ST;
             float _ForceFieldRadius;
             float3 _ForceFieldPosition;
+            float4 _ColourA;
+            float4 _ColourB;
 
-            float3 GetParticleOffset(float3 particleCenter)
+            float4 GetParticleOffset(float3 particleCenter)
             {
                 float distanceToParticle = distance(particleCenter, _ForceFieldPosition);
-    
-                if (distanceToParticle < _ForceFieldRadius)
-                {
-                    float distanceToForceFieldRadius = _ForceFieldRadius - distanceToParticle;
-                    float3 directionToParticle = normalize(particleCenter - _ForceFieldPosition);
-                    return directionToParticle * distanceToForceFieldRadius;
-                }
-                 return 0;
+                float forceFieldRadiusAbs = abs(_ForceFieldRadius);
+            
+                float3 directionToParticle = normalize(particleCenter - _ForceFieldPosition);
+            
+                float distanceToForceFieldRadius = forceFieldRadiusAbs - distanceToParticle;
+                distanceToForceFieldRadius = max(distanceToForceFieldRadius, 0.0);
+            
+                distanceToForceFieldRadius *= sign(_ForceFieldRadius);
+            
+                float4 particleOffset;
+            
+                particleOffset.xyz = directionToParticle * distanceToForceFieldRadius;
+                particleOffset.w = distanceToForceFieldRadius / (_ForceFieldRadius + 0.0001); // Add small value to prevent divide by zero and undefined colour/behaviour at r = 0.0.
+            
+                return particleOffset;
             }
 
             v2f vert (appdata v)
@@ -75,6 +86,11 @@
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.tc0);
                 // apply fog
+                float3 particleCenter = float3(i.tc0.zw, i.tc1.x);
+                float particleOffsetNormalizedLength = GetParticleOffset(particleCenter).w;
+            
+                col = lerp(col * _ColourA, col * _ColourB, particleOffsetNormalizedLength);
+ 
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
             }

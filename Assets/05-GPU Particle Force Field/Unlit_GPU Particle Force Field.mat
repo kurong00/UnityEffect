@@ -60,7 +60,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _ForceFieldRadius: 0
+    - _ForceFieldRadius: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -75,7 +75,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColourA: {r: 0, g: 0, b: 0, a: 0}
-    - _ColourB: {r: 1, g: 1, b: 1, a: 1}
+    - _ColourA: {r: 0.990566, g: 0.8733823, b: 0.21960661, a: 1}
+    - _ColourB: {r: 0.09344962, g: 0.6152944, b: 0.9433962, a: 0.23921569}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ForceFieldPosition: {r: 0, g: 0, b: 0, a: 0}
