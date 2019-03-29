@@ -1,4 +1,4 @@
-﻿Shader "Unlit/GPU Particle Force Field Unlit"
+﻿Shader "Kurong/GPU Particle Force Field Unlit"
 {
     Properties
     {
@@ -30,6 +30,7 @@
                 float4 vertex : POSITION;
                 float4 tc0 : TEXCOORD0;
                 float4 tc1 : TEXCOORD1;
+                fixed4 color : COLOR;
             };
 
             struct v2f
@@ -38,6 +39,7 @@
                 float4 tc1 : TEXCOORD1;
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
+                fixed4 color : COLOR;
             };
 
             sampler2D _MainTex;
@@ -77,6 +79,8 @@
                 v.vertex.xyz += vertexOffset;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.tc0.xy = TRANSFORM_TEX(v.tc0, _MainTex);
+                o.tc0.zw = v.tc0.zw;
+				o.tc1 = v.tc1;
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
@@ -85,12 +89,14 @@
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.tc0);
+                //col*=i.color;
                 // apply fog
                 float3 particleCenter = float3(i.tc0.zw, i.tc1.x);
                 float particleOffsetNormalizedLength = GetParticleOffset(particleCenter).w;
             
                 col = lerp(col * _ColourA, col * _ColourB, particleOffsetNormalizedLength);
- 
+
+                col*=col.a;
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
             }

@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Simplex Noise Particle Unlit"
+﻿Shader "Kurong/Simplex Noise Particle Unlit"
 {
     Properties
     {
