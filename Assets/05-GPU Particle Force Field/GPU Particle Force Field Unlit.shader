@@ -30,7 +30,6 @@
                 float4 vertex : POSITION;
                 float4 tc0 : TEXCOORD0;
                 float4 tc1 : TEXCOORD1;
-                fixed4 color : COLOR;
             };
 
             struct v2f
@@ -39,7 +38,6 @@
                 float4 tc1 : TEXCOORD1;
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
-                fixed4 color : COLOR;
             };
 
             sampler2D _MainTex;
@@ -64,7 +62,7 @@
                 float4 particleOffset;
             
                 particleOffset.xyz = directionToParticle * distanceToForceFieldRadius;
-                particleOffset.w = distanceToForceFieldRadius / (_ForceFieldRadius + 0.0001); // Add small value to prevent divide by zero and undefined colour/behaviour at r = 0.0.
+                particleOffset.w = distanceToForceFieldRadius / (_ForceFieldRadius + 0.0001); 
             
                 return particleOffset;
             }
@@ -89,8 +87,6 @@
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.tc0);
-                //col*=i.color;
-                // apply fog
                 float3 particleCenter = float3(i.tc0.zw, i.tc1.x);
                 float particleOffsetNormalizedLength = GetParticleOffset(particleCenter).w;
             
