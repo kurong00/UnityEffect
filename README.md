@@ -1,5 +1,5 @@
 # UnityEffect
-Learning Unity Effects according to [Mirza Beig's blog](http://www.mirzabeig.com/tutorials/)
+Collection of fun effects (thanks to [Mirza Beig's blog](http://www.mirzabeig.com/tutorials/)) Continuously updated...
 ## 01-Logo Dissolve with Particles
 ![](https://github.com/kurong00/EditGraphics/blob/master/UnityEffects/Logo%20Dissolve.gif)
 ## 02-Logo Reveal with Particles
